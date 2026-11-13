@@ -1,10 +1,13 @@
 <?php
 // ============================================================
-// ajax_lang.php — Language Switcher AJAX Endpoint
+// api/ajax_lang.php — Language Switcher AJAX Endpoint
 // ============================================================
 
+// Project root (one level above /api)
+define('ROOT_PATH', dirname(__DIR__));
+
 session_start();
-require_once '../includes/functions.php';
+require_once ROOT_PATH . '/includes/functions.php';
 
 header('Content-Type: application/json; charset=utf-8');
 
@@ -21,6 +24,7 @@ if (isset($_POST['lang'])) {
 
 // 2. Validate language choice
 if (!in_array($lang, ['km', 'en'], true)) {
+    http_response_code(400);
     echo json_encode([
         'status'  => 'error',
         'message' => 'Invalid language. Allowed: km, en',
@@ -28,11 +32,17 @@ if (!in_array($lang, ['km', 'en'], true)) {
     exit;
 }
 
-// 3. Save language to Session
+// 3. Save language to Session + Cookie (cookie survives serverless requests)
 $_SESSION['lang'] = $lang;
+setcookie('kv9_lang', $lang, [
+    'expires'  => time() + 31536000,
+    'path'     => '/',
+    'samesite' => 'Lax',
+]);
 
 // 4. Fetch all translations safely
 if (!function_exists('get_all_translations')) {
+    http_response_code(500);
     echo json_encode([
         'status'  => 'error',
         'message' => 'Function get_all_translations() not found in functions.php',
@@ -44,6 +54,7 @@ $translations = get_all_translations($lang);
 
 // 5. Verify translation dictionary
 if (empty($translations)) {
+    http_response_code(500);
     echo json_encode([
         'status'  => 'error',
         'message' => 'Translation dictionary is empty for: ' . $lang,
