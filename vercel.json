@@ -1,33 +1,16 @@
 {
   "version": 2,
   "functions": {
-    "index.php": {
-      "runtime": "vercel-php@0.7.4"
-    },
-    "ajax_lang.php": {
-      "runtime": "vercel-php@0.7.4"
+    "api/*.php": {
+      "runtime": "vercel-php@0.7.4",
+      "includeFiles": "{pages,includes,images}/**"
     }
   },
   "routes": [
-    {
-      "src": "/images/(.*)",
-      "dest": "/images/$1"
-    },
-    {
-      "src": "/favicon.ico",
-      "dest": "/favicon.ico"
-    },
-    {
-      "src": "/robots.txt",
-      "dest": "/robots.txt"
-    },
-    {
-      "src": "/ajax_lang.php",
-      "dest": "/ajax_lang.php"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.php"
-    }
+    { "src": "/images/(.*)", "dest": "/images/$1" },
+    { "src": "/favicon.ico", "dest": "/favicon.ico" },
+    { "src": "/robots.txt", "dest": "/robots.txt" },
+    { "src": "/ajax_lang.php", "dest": "/api/ajax_lang.php" },
+    { "src": "/(.*)", "dest": "/api/index.php" }
   ]
 }
