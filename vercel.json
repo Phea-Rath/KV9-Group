@@ -1,19 +1,26 @@
 {
   "version": 2,
-  "functions": {
-    "api/*.php": {
-      "runtime": "vercel-php@0.7.4",
-      "includeFiles": "{pages,includes,images}/**"
+  "builds": [
+    {
+      "src": "index.php",
+      "use": "vercel-php@0.7.4",
+      "config": { "includeFiles": ["pages/**", "includes/**"] }
     },
-    "index.php": {
-      "runtime": "vercel-php@0.7.4"
-    }
-  },
+    {
+      "src": "api/ajax_lang.php",
+      "use": "vercel-php@0.7.4",
+      "config": { "includeFiles": ["includes/**"] }
+    },
+    { "src": "images/**", "use": "@vercel/static" },
+    { "src": "favicon.ico", "use": "@vercel/static" },
+    { "src": "robots.txt", "use": "@vercel/static" }
+  ],
   "routes": [
     { "src": "/images/(.*)", "dest": "/images/$1" },
     { "src": "/favicon.ico", "dest": "/favicon.ico" },
     { "src": "/robots.txt", "dest": "/robots.txt" },
-    { "src": "/api/(.*)", "dest": "/api/$1" },
+    { "src": "/ajax_lang.php", "dest": "/api/ajax_lang.php" },
+    { "src": "/api/ajax_lang.php", "dest": "/api/ajax_lang.php" },
     { "src": "/(.*)", "dest": "/index.php" }
   ]
 }
