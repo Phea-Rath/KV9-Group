@@ -1,7 +1,10 @@
 <?php
-// ============================================================
-// pages/portfolio.php — Business Units & Services
-// ============================================================
+// Ensure translation function is available
+if (!function_exists('__')) {
+    function __($key) {
+        return $key;
+    }
+}
 ?>
 
 <!-- Page Header Title -->
@@ -20,7 +23,7 @@
 <section class="max-w-7xl mx-auto py-16 px-4">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-         <!-- Business Card 5: KV9 GROUP -->
+         <!-- Business Card 1: KV9 CAMBODIA CO.,LTD -->
         <div class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden group hover:shadow-xl transition duration-300 flex flex-col justify-between">
             <div>
                 <div class="aspect-square w-full relative overflow-hidden bg-gray-100">
@@ -36,13 +39,13 @@
                 </div>
             </div>
             <div class="px-6 pb-6">
-                <button onclick="openModal('modal-kv9-cosmetic')" class="inline-flex items-center text-blue-900 font-semibold text-sm hover:text-blue-700 transition cursor-pointer" data-lang-key="btn_details">
-                    <?php echo __('btn_details'); ?> <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                <button onclick="openModal('modal-kv9-cosmetic')" class="inline-flex items-center text-blue-900 font-semibold text-sm hover:text-blue-700 transition cursor-pointer">
+                    <span data-lang-key="btn_details"><?php echo __('btn_details'); ?></span> <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
                 </button>
             </div>
         </div>
 
-        <!-- Business Card 1: Star Care Company -->
+        <!-- Business Card 2: Star Care Company -->
         <div class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden group hover:shadow-xl transition duration-300 flex flex-col justify-between">
             <div>
                 <div class="aspect-square w-full relative overflow-hidden bg-gray-100">
@@ -58,13 +61,13 @@
                 </div>
             </div>
             <div class="px-6 pb-6">
-                <button onclick="openModal('modal-starcare')" class="inline-flex items-center text-blue-900 font-semibold text-sm hover:text-blue-700 transition cursor-pointer" data-lang-key="btn_details">
-                    <?php echo __('btn_details'); ?> <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                <button onclick="openModal('modal-starcare')" class="inline-flex items-center text-blue-900 font-semibold text-sm hover:text-blue-700 transition cursor-pointer">
+                    <span data-lang-key="btn_details"><?php echo __('btn_details'); ?></span> <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
                 </button>
             </div>
         </div>
 
-        <!-- Business Card 2: Chomnenh Technology -->
+        <!-- Business Card 3: Chomnenh Technology -->
         <div class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden group hover:shadow-xl transition duration-300 flex flex-col justify-between">
             <div>
                 <div class="aspect-square w-full relative overflow-hidden bg-gray-100">
@@ -80,19 +83,19 @@
                 </div>
             </div>
             <div class="px-6 pb-6">
-                <button onclick="openModal('modal-chomnenh-tech')" class="inline-flex items-center text-blue-900 font-semibold text-sm hover:text-blue-700 transition cursor-pointer" data-lang-key="btn_details">
-                    <?php echo __('btn_details'); ?> <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                <button onclick="openModal('modal-chomnenh-tech')" class="inline-flex items-center text-blue-900 font-semibold text-sm hover:text-blue-700 transition cursor-pointer">
+                    <span data-lang-key="btn_details"><?php echo __('btn_details'); ?></span> <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
                 </button>
             </div>
         </div>
 
-        <!-- Business Card 3: Sothy Craft -->
+        <!-- Business Card 4: Sothy Craft -->
         <div class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden group hover:shadow-xl transition duration-300 flex flex-col justify-between">
             <div>
                 <div class="aspect-square w-full relative overflow-hidden bg-gray-100">
-                    <img src="images/products/sccover.jpg" alt="<?php echo htmlspecialchars(__('subs_t5_name')); ?>" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <img src="images/products/sccover.jpg" alt="<?php echo htmlspecialchars(__('sub2_name')); ?>" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-6">
-                        <h3 class="text-2xl font-bold text-white" data-lang-key="subs_t5_name"><?php echo __('subs_t5_name'); ?></h3>
+                        <h3 class="text-2xl font-bold text-white" data-lang-key="sub2_name"><?php echo __('sub2_name'); ?></h3>
                     </div>
                 </div>
                 <div class="p-6">
@@ -102,13 +105,13 @@
                 </div>
             </div>
             <div class="px-6 pb-6">
-                <button onclick="openModal('modal-sothy-craft')" class="inline-flex items-center text-blue-900 font-semibold text-sm hover:text-blue-700 transition cursor-pointer" data-lang-key="btn_details">
-                    <?php echo __('btn_details'); ?> <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                <button onclick="openModal('modal-sothy-craft')" class="inline-flex items-center text-blue-900 font-semibold text-sm hover:text-blue-700 transition cursor-pointer">
+                    <span data-lang-key="btn_details"><?php echo __('btn_details'); ?></span> <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
                 </button>
             </div>
         </div>
 
-        <!-- Business Card 6: វីជីង ម្សៅស៊ុប -->
+        <!-- Business Card 5: Vijing Soup Powder -->
         <div class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden group hover:shadow-xl transition duration-300 flex flex-col justify-between">
             <div>
                 <div class="aspect-square w-full relative overflow-hidden bg-gray-100">
@@ -124,13 +127,13 @@
                 </div>
             </div>
             <div class="px-6 pb-6">
-                <button onclick="openModal('modal-vijing-soup')" class="inline-flex items-center text-blue-900 font-semibold text-sm hover:text-blue-700 transition cursor-pointer" data-lang-key="btn_details">
-                    <?php echo __('btn_details'); ?> <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                <button onclick="openModal('modal-vijing-soup')" class="inline-flex items-center text-blue-900 font-semibold text-sm hover:text-blue-700 transition cursor-pointer">
+                    <span data-lang-key="btn_details"><?php echo __('btn_details'); ?></span> <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
                 </button>
             </div>
         </div>
 
-        <!-- Business Card 4: Chomnenh Recruitment -->
+        <!-- Business Card 6: Chomnenh Recruitment -->
         <div class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden group hover:shadow-xl transition duration-300 flex flex-col justify-between">
             <div>
                 <div class="aspect-square w-full relative overflow-hidden bg-gray-100">
@@ -146,8 +149,8 @@
                 </div>
             </div>
             <div class="px-6 pb-6">
-                <button onclick="openModal('modal-chomnenh-recruitment')" class="inline-flex items-center text-blue-900 font-semibold text-sm hover:text-blue-700 transition cursor-pointer" data-lang-key="btn_details">
-                    <?php echo __('btn_details'); ?> <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                <button onclick="openModal('modal-chomnenh-recruitment')" class="inline-flex items-center text-blue-900 font-semibold text-sm hover:text-blue-700 transition cursor-pointer">
+                    <span data-lang-key="btn_details"><?php echo __('btn_details'); ?></span> <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
                 </button>
             </div>
         </div>
@@ -156,86 +159,137 @@
 </section>
 
 <!-- ========================================== -->
-<!-- MODALS WITH 1:1 SQUARE PRODUCT GALLERY    -->
+<!-- MODALS WITH 1:1 SQUARE PRODUCT GALLERY     -->
 <!-- ========================================== -->
 
-<!-- Modal 1: Star Care Company -->
+<!-- Modal 1: KV9 Cambodia (K WHITE Products) -->
+<div id="modal-kv9-cosmetic" class="fixed inset-0 z-50 hidden bg-black/75 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative p-6 sm:p-8">
+        <button onclick="closeModal('modal-kv9-cosmetic')" class="absolute top-4 right-4 bg-black/50 hover:bg-black/70 text-white w-9 h-9 rounded-full flex items-center justify-center text-base font-bold transition z-20">✕</button>
+        
+        <div class="mb-6">
+            <span class="text-xs font-bold text-blue-600 uppercase tracking-wider" data-lang-key="sub1_cat"><?php echo __('sub1_cat'); ?></span>
+            <h2 class="text-2xl font-extrabold text-gray-900 mt-1" data-lang-key="sub1_name"><?php echo __('sub1_name'); ?></h2>
+            <p class="text-gray-600 text-sm mt-1" data-lang-key="sub1_modal_text"><?php echo __('sub1_modal_text'); ?></p>
+        </div>
+
+        <div>
+            <h4 class="font-bold text-gray-900 text-sm mb-4" data-lang-key="port_modal_product_title">ផលិតផល និងសេវាកម្ម (1:1 Aspect Ratio):</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div class="bg-gray-50 border border-gray-100 rounded-xl overflow-hidden shadow-xs flex flex-col"><div class="aspect-square w-full bg-gray-200"><img src="images/products/kv9cover.png" class="w-full h-full object-cover"></div></div>
+                <div class="bg-gray-50 border border-gray-100 rounded-xl overflow-hidden shadow-xs flex flex-col"><div class="aspect-square w-full bg-gray-200"><img src="images/products/st0001.jpg" class="w-full h-full object-cover"></div></div>
+                <div class="bg-gray-50 border border-gray-100 rounded-xl overflow-hidden shadow-xs flex flex-col"><div class="aspect-square w-full bg-gray-200"><img src="images/products/st0002.jpg" class="w-full h-full object-cover"></div></div>
+                <div class="bg-gray-50 border border-gray-100 rounded-xl overflow-hidden shadow-xs flex flex-col"><div class="aspect-square w-full bg-gray-200"><img src="images/products/st0003.jpg" class="w-full h-full object-cover"></div></div>
+                <div class="bg-gray-50 border border-gray-100 rounded-xl overflow-hidden shadow-xs flex flex-col"><div class="aspect-square w-full bg-gray-200"><img src="images/products/st0004.jpg" class="w-full h-full object-cover"></div></div>
+                <div class="bg-gray-50 border border-gray-100 rounded-xl overflow-hidden shadow-xs flex flex-col"><div class="aspect-square w-full bg-gray-200"><img src="images/products/st0005.jpg" class="w-full h-full object-cover"></div></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 2: Star Care -->
 <div id="modal-starcare" class="fixed inset-0 z-50 hidden bg-black/75 backdrop-blur-sm flex items-center justify-center p-4">
-    <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative">
+    <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative p-6 sm:p-8">
         <button onclick="closeModal('modal-starcare')" class="absolute top-4 right-4 bg-black/50 hover:bg-black/70 text-white w-9 h-9 rounded-full flex items-center justify-center text-base font-bold transition z-20">✕</button>
-        <div class="p-6 space-y-6">
-            <div>
-                <span class="text-xs font-bold text-blue-600 uppercase tracking-wider" data-lang-key="sub4_cat"><?php echo __('sub4_cat'); ?></span>
-                <h2 class="text-2xl font-extrabold text-gray-900 mt-1" data-lang-key="sub4_name"><?php echo __('sub4_name'); ?></h2>
-                <p class="text-gray-600 text-xs sm:text-sm mt-1" data-lang-key="port_modal_starcare_desc"><?php echo __('port_modal_starcare_desc'); ?></p>
-            </div>
-            <div>
-                <h4 class="font-bold text-gray-900 text-sm mb-3" data-lang-key="port_modal_product_title"><?php echo __('port_modal_product_title'); ?></h4>
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                    <!-- រូបភាពទាំងអស់នៅទីនេះមិនចាំបាច់បកប្រែទេ ព្រោះជារូបភាព -->
-                    <!-- (ទុកកូដរូបភាពដើមរបស់អ្នកនៅដដែល) -->
-                    <div class="bg-gray-50 border border-gray-100 rounded-xl overflow-hidden shadow-xs flex flex-col"><div class="aspect-square w-full bg-gray-200"><img src="images/products/st0001.jpg" alt="Skincare" class="w-full h-full object-cover"></div></div>
-                    <div class="bg-gray-50 border border-gray-100 rounded-xl overflow-hidden shadow-xs flex flex-col"><div class="aspect-square w-full bg-gray-200"><img src="images/products/st0002.jpg" alt="Body Hygiene" class="w-full h-full object-cover"></div></div>
-                    <div class="bg-gray-50 border border-gray-100 rounded-xl overflow-hidden shadow-xs flex flex-col"><div class="aspect-square w-full bg-gray-200"><img src="images/products/st0003.jpg" alt="Distribution" class="w-full h-full object-cover"></div></div>
-                    <!-- ... អ្នកអាចបន្តដាក់រូបភាពផ្សេងទៀតនៅទីនេះ ... -->
-                </div>
-            </div>
+        <div class="mb-6">
+            <span class="text-xs font-bold text-blue-600 uppercase tracking-wider" data-lang-key="sub4_cat"><?php echo __('sub4_cat'); ?></span>
+            <h2 class="text-2xl font-extrabold text-gray-900 mt-1" data-lang-key="sub4_name"><?php echo __('sub4_name'); ?></h2>
+            <p class="text-gray-600 text-sm mt-1" data-lang-key="sub4_modal_text"><?php echo __('sub4_modal_text'); ?></p>
+        </div>
+        <h4 class="font-bold text-gray-900 text-sm mb-4" data-lang-key="port_modal_product_title">ផលិតផល និងសេវាកម្ម</h4>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div class="bg-gray-50 border border-gray-100 rounded-xl overflow-hidden shadow-xs flex flex-col"><div class="aspect-square w-full bg-gray-200"><img src="images/products/st0001.jpg" class="w-full h-full object-cover"></div></div>
+            <div class="bg-gray-50 border border-gray-100 rounded-xl overflow-hidden shadow-xs flex flex-col"><div class="aspect-square w-full bg-gray-200"><img src="images/products/st0002.jpg" class="w-full h-full object-cover"></div></div>
+            <div class="bg-gray-50 border border-gray-100 rounded-xl overflow-hidden shadow-xs flex flex-col"><div class="aspect-square w-full bg-gray-200"><img src="images/products/st0003.jpg" class="w-full h-full object-cover"></div></div>
+            <div class="bg-gray-50 border border-gray-100 rounded-xl overflow-hidden shadow-xs flex flex-col"><div class="aspect-square w-full bg-gray-200"><img src="images/products/st0006.jpg" class="w-full h-full object-cover"></div></div>
+            <div class="bg-gray-50 border border-gray-100 rounded-xl overflow-hidden shadow-xs flex flex-col"><div class="aspect-square w-full bg-gray-200"><img src="images/products/st0007.jpg" class="w-full h-full object-cover"></div></div>
+            <div class="bg-gray-50 border border-gray-100 rounded-xl overflow-hidden shadow-xs flex flex-col"><div class="aspect-square w-full bg-gray-200"><img src="images/products/st0008.jpg" class="w-full h-full object-cover"></div></div>
         </div>
     </div>
 </div>
 
-<!-- Modal 2: Chomnenh Technology -->
+<!-- Modal 3: Chomnenh Technology -->
 <div id="modal-chomnenh-tech" class="fixed inset-0 z-50 hidden bg-black/75 backdrop-blur-sm flex items-center justify-center p-4">
-    <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative">
+    <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative p-6 sm:p-8">
         <button onclick="closeModal('modal-chomnenh-tech')" class="absolute top-4 right-4 bg-black/50 hover:bg-black/70 text-white w-9 h-9 rounded-full flex items-center justify-center text-base font-bold transition z-20">✕</button>
-        <div class="p-6 space-y-6">
-            <div>
-                <span class="text-xs font-bold text-blue-600 uppercase tracking-wider" data-lang-key="sub3_cat"><?php echo __('sub3_cat'); ?></span>
-                <h2 class="text-2xl font-extrabold text-gray-900 mt-1" data-lang-key="sub3_name"><?php echo __('sub3_name'); ?></h2>
-                <p class="text-gray-600 text-xs sm:text-sm mt-1" data-lang-key="port_modal_tech_desc"><?php echo __('port_modal_tech_desc'); ?></p>
-            </div>
-            <div>
-                <h4 class="font-bold text-gray-900 text-sm mb-3" data-lang-key="port_modal_product_title"><?php echo __('port_modal_product_title'); ?></h4>
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                    <div class="bg-gray-50 border border-gray-100 rounded-xl overflow-hidden shadow-xs flex flex-col">
-                        <div class="aspect-square w-full bg-gray-200"><img src="images/products/ch0001.jpg" alt="Digital Menu" class="w-full h-full object-cover"></div>
-                        <div class="p-3">
-                            <h5 class="font-bold text-gray-900 text-xs sm:text-sm" data-lang-key="port_tech_item1_title"><?php echo __('port_tech_item1_title'); ?></h5>
-                            <p class="text-gray-500 text-xs mt-1" data-lang-key="port_tech_item1_desc"><?php echo __('port_tech_item1_desc'); ?></p>
-                        </div>
-                    </div>
-                    <div class="bg-gray-50 border border-gray-100 rounded-xl overflow-hidden shadow-xs flex flex-col">
-                        <div class="aspect-square w-full bg-gray-200"><img src="images/products/ch0003.jpg" alt="ERP" class="w-full h-full object-cover"></div>
-                        <div class="p-3">
-                            <h5 class="font-bold text-gray-900 text-xs sm:text-sm" data-lang-key="port_tech_item2_title"><?php echo __('port_tech_item2_title'); ?></h5>
-                            <p class="text-gray-500 text-xs mt-1" data-lang-key="port_tech_item2_desc"><?php echo __('port_tech_item2_desc'); ?></p>
-                        </div>
-                    </div>
-                    <div class="bg-gray-50 border border-gray-100 rounded-xl overflow-hidden shadow-xs flex flex-col">
-                        <div class="aspect-square w-full bg-gray-200"><img src="images/products/ch0002.jpg" alt="HR System" class="w-full h-full object-cover"></div>
-                        <div class="p-3">
-                            <h5 class="font-bold text-gray-900 text-xs sm:text-sm" data-lang-key="port_tech_item3_title"><?php echo __('port_tech_item3_title'); ?></h5>
-                            <p class="text-gray-500 text-xs mt-1" data-lang-key="port_tech_item3_desc"><?php echo __('port_tech_item3_desc'); ?></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="mb-6">
+            <span class="text-xs font-bold text-blue-600 uppercase tracking-wider" data-lang-key="sub3_cat"><?php echo __('sub3_cat'); ?></span>
+            <h2 class="text-2xl font-extrabold text-gray-900 mt-1" data-lang-key="sub3_name"><?php echo __('sub3_name'); ?></h2>
+            <p class="text-gray-600 text-sm mt-1" data-lang-key="sub3_modal_text"><?php echo __('sub3_modal_text'); ?></p>
+        </div>
+        <h4 class="font-bold text-gray-900 text-sm mb-4" data-lang-key="port_modal_product_title">ផលិតផល និងសេវាកម្ម</h4>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div class="bg-gray-50 border border-gray-100 rounded-xl overflow-hidden shadow-xs flex flex-col"><div class="aspect-square w-full bg-gray-200"><img src="images/products/ch0001.jpg" class="w-full h-full object-cover"></div></div>
+            <div class="bg-gray-50 border border-gray-100 rounded-xl overflow-hidden shadow-xs flex flex-col"><div class="aspect-square w-full bg-gray-200"><img src="images/products/ch0002.jpg" class="w-full h-full object-cover"></div></div>
+            <div class="bg-gray-50 border border-gray-100 rounded-xl overflow-hidden shadow-xs flex flex-col"><div class="aspect-square w-full bg-gray-200"><img src="images/products/ch0003.jpg" class="w-full h-full object-cover"></div></div>
         </div>
     </div>
 </div>
 
-<!-- អ្នកអាចបន្តធ្វើដូចគ្នាចំពោះ Modal ផ្សេងទៀត (Sothy Craft, Recruitment, KV9, Vijing) ដោយគ្រាន់តែបន្ថែម data-lang-key និង <?php echo __('...'); ?> ទៅលើអត្ថបទដែលអ្នកចង់បកប្រែ។ -->
+<!-- Modal 4: Sothy Craft -->
+<div id="modal-sothy-craft" class="fixed inset-0 z-50 hidden bg-black/75 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative p-6 sm:p-8">
+        <button onclick="closeModal('modal-sothy-craft')" class="absolute top-4 right-4 bg-black/50 hover:bg-black/70 text-white w-9 h-9 rounded-full flex items-center justify-center text-base font-bold transition z-20">✕</button>
+        <div class="mb-6">
+            <span class="text-xs font-bold text-blue-600 uppercase tracking-wider" data-lang-key="sub2_cat"><?php echo __('sub2_cat'); ?></span>
+            <h2 class="text-2xl font-extrabold text-gray-900 mt-1" data-lang-key="sub2_name"><?php echo __('sub2_name'); ?></h2>
+            <p class="text-gray-600 text-sm mt-1" data-lang-key="sub2_modal_text"><?php echo __('sub2_modal_text'); ?></p>
+        </div>
+        <h4 class="font-bold text-gray-900 text-sm mb-4" data-lang-key="port_modal_product_title">ផលិតផល និងសេវាកម្ម</h4>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div class="bg-gray-50 border border-gray-100 rounded-xl overflow-hidden shadow-xs flex flex-col"><div class="aspect-square w-full bg-gray-200"><img src="images/products/sccover.jpg" class="w-full h-full object-cover"></div></div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 5: Vijing Soup -->
+<div id="modal-vijing-soup" class="fixed inset-0 z-50 hidden bg-black/75 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative p-6 sm:p-8">
+        <button onclick="closeModal('modal-vijing-soup')" class="absolute top-4 right-4 bg-black/50 hover:bg-black/70 text-white w-9 h-9 rounded-full flex items-center justify-center text-base font-bold transition z-20">✕</button>
+        <div class="mb-6">
+            <span class="text-xs font-bold text-blue-600 uppercase tracking-wider" data-lang-key="sub6_cat"><?php echo __('sub6_cat'); ?></span>
+            <h2 class="text-2xl font-extrabold text-gray-900 mt-1" data-lang-key="sub6_name"><?php echo __('sub6_name'); ?></h2>
+            <p class="text-gray-600 text-sm mt-1" data-lang-key="sub6_modal_text"><?php echo __('sub6_modal_text'); ?></p>
+        </div>
+        <h4 class="font-bold text-gray-900 text-sm mb-4" data-lang-key="port_modal_product_title">ផលិតផល និងសេវាកម្ម</h4>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div class="bg-gray-50 border border-gray-100 rounded-xl overflow-hidden shadow-xs flex flex-col"><div class="aspect-square w-full bg-gray-200"><img src="images/products/vj0002.jpg" class="w-full h-full object-cover"></div></div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 6: Chomnenh Recruitment -->
+<div id="modal-chomnenh-recruitment" class="fixed inset-0 z-50 hidden bg-black/75 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative p-6 sm:p-8">
+        <button onclick="closeModal('modal-chomnenh-recruitment')" class="absolute top-4 right-4 bg-black/50 hover:bg-black/70 text-white w-9 h-9 rounded-full flex items-center justify-center text-base font-bold transition z-20">✕</button>
+        <div class="mb-6">
+            <span class="text-xs font-bold text-blue-600 uppercase tracking-wider" data-lang-key="sub5_cat"><?php echo __('sub5_cat'); ?></span>
+            <h2 class="text-2xl font-extrabold text-gray-900 mt-1" data-lang-key="sub5_name"><?php echo __('sub5_name'); ?></h2>
+            <p class="text-gray-600 text-sm mt-1" data-lang-key="sub5_modal_text"><?php echo __('sub5_modal_text'); ?></p>
+        </div>
+        <h4 class="font-bold text-gray-900 text-sm mb-4" data-lang-key="port_modal_product_title">ផលិតផល និងសេវាកម្ម</h4>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div class="aspect-square bg-gray-100 rounded-xl overflow-hidden shadow-xs flex flex-col"><div class="aspect-square w-full bg-gray-200"><img src="images/recrutment.webp" class="w-full h-full object-cover"></div></div>
+        </div>
+    </div>
+</div>
 
 <!-- JavaScript Modals Control -->
 <script>
     function openModal(id) {
-        document.getElementById(id).classList.remove('hidden');
-        document.body.style.overflow = 'hidden';
+        const modal = document.getElementById(id);
+        if(modal) {
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
     }
 
     function closeModal(id) {
-        document.getElementById(id).classList.add('hidden');
-        document.body.style.overflow = 'auto';
+        const modal = document.getElementById(id);
+        if(modal) {
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
     }
 
     window.onclick = function(event) {
