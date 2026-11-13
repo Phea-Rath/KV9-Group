@@ -235,7 +235,7 @@ $page_title = $page_titles[$page] ?? 'KV9 GROUP';
         function switchLanguage(lang) {
             if (lang !== 'km' && lang !== 'en') return;
 
-            fetch('ajax_lang.php', {
+            fetch('api/ajax_lang.php', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                 body: 'lang=' + encodeURIComponent(lang)
