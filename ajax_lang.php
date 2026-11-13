@@ -8,8 +8,18 @@ require_once 'includes/functions.php';
 
 header('Content-Type: application/json; charset=utf-8');
 
-// ១. ពិនិត្យមើលភាសាដែលបានផ្ញើមក
-$lang = $_POST['lang'] ?? 'km';
+// 1. Get language from POST or JSON body robustly
+$lang = 'km'; // default
+if (isset($_POST['lang'])) {
+    $lang = trim($_POST['lang']);
+} else {
+    $input = json_decode(file_get_contents('php://input'), true);
+    if (isset($input['lang'])) {
+        $lang = trim($input['lang']);
+    }
+}
+
+// 2. Validate language choice
 if (!in_array($lang, ['km', 'en'], true)) {
     echo json_encode([
         'status'  => 'error',
@@ -18,13 +28,21 @@ if (!in_array($lang, ['km', 'en'], true)) {
     exit;
 }
 
-// ២. រក្សាទុកភាសាទៅក្នុង Session
+// 3. Save language to Session
 $_SESSION['lang'] = $lang;
 
-// ៣. ទាញយកពាក្យបកប្រែទាំងអស់ (ទាំង KM និង EN) ដោយស្វ័យប្រវត្តិពី functions.php
+// 4. Fetch all translations safely
+if (!function_exists('get_all_translations')) {
+    echo json_encode([
+        'status'  => 'error',
+        'message' => 'Function get_all_translations() not found in functions.php',
+    ], JSON_UNESCAPED_UNICODE);
+    exit;
+}
+
 $translations = get_all_translations($lang);
 
-// ៤. ពិនិត្យមើលថាតើមានទិន្នន័យឬអត់
+// 5. Verify translation dictionary
 if (empty($translations)) {
     echo json_encode([
         'status'  => 'error',
@@ -33,7 +51,7 @@ if (empty($translations)) {
     exit;
 }
 
-// ៥. បញ្ជូនទិន្នន័យត្រឡប់ទៅ JavaScript វិញ
+// 6. Return successful response back to JavaScript
 echo json_encode([
     'status'       => 'success',
     'lang'         => $lang,
