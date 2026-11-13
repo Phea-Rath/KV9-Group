@@ -6,11 +6,18 @@
 // ============================================================
 
 if (session_status() === PHP_SESSION_NONE) {
-    session_start();
+    if (!is_writable(session_save_path())) {
+        @session_save_path('/tmp');
+    }
+    @session_start();
 }
 
-if (!isset($_SESSION['lang']) || !in_array($_SESSION['lang'], ['km', 'en'])) {
-    $_SESSION['lang'] = 'km';
+if (!isset($_SESSION['lang']) || !in_array($_SESSION['lang'], ['km', 'en'], true)) {
+    if (isset($_COOKIE['kv9_lang']) && in_array($_COOKIE['kv9_lang'], ['km', 'en'], true)) {
+        $_SESSION['lang'] = $_COOKIE['kv9_lang'];
+    } else {
+        $_SESSION['lang'] = 'km';
+    }
 }
 
 function __($key) {

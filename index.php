@@ -2,13 +2,20 @@
 // ============================================================
 // KV9 GROUP - Main Layout / Router
 // ============================================================
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    if (!is_writable(session_save_path())) {
+        @session_save_path('/tmp');
+    }
+    @session_start();
+}
 
-require_once 'includes/functions.php';
+require_once __DIR__ . '/includes/functions.php';
 
-// Fallback if session lang not set
-if (!isset($_SESSION['lang']) || !in_array($_SESSION['lang'], ['km', 'en'])) {
-    $_SESSION['lang'] = 'en';
+// Check cookie first (survives serverless stateless requests), then session, default to 'km'
+if (isset($_COOKIE['kv9_lang']) && in_array($_COOKIE['kv9_lang'], ['km', 'en'], true)) {
+    $_SESSION['lang'] = $_COOKIE['kv9_lang'];
+} elseif (!isset($_SESSION['lang']) || !in_array($_SESSION['lang'], ['km', 'en'], true)) {
+    $_SESSION['lang'] = 'km';
 }
 $current_lang = $_SESSION['lang'];
 
@@ -164,7 +171,7 @@ $page_title = $page_titles[$page] ?? 'KV9 GROUP';
     <!-- ============================================================ -->
     <main class="flex-grow">
         <?php
-            $file = 'pages/' . $page . '.php';
+            $file = __DIR__ . '/pages/' . $page . '.php';
             if (file_exists($file)) {
                 include($file);
             } else {
@@ -235,7 +242,7 @@ $page_title = $page_titles[$page] ?? 'KV9 GROUP';
         function switchLanguage(lang) {
             if (lang !== 'km' && lang !== 'en') return;
 
-            fetch('api/ajax_lang.php', {
+            fetch('/api/ajax_lang.php', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                 body: 'lang=' + encodeURIComponent(lang)

@@ -6,8 +6,14 @@
 // Project root (one level above /api)
 define('ROOT_PATH', dirname(__DIR__));
 
-session_start();
-require_once ROOT_PATH . '../includes/functions.php';
+if (session_status() === PHP_SESSION_NONE) {
+    if (!is_writable(session_save_path())) {
+        @session_save_path('/tmp');
+    }
+    @session_start();
+}
+
+require_once ROOT_PATH . '/includes/functions.php';
 
 header('Content-Type: application/json; charset=utf-8');
 
