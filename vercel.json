@@ -1,7 +1,10 @@
 {
   "version": 2,
   "functions": {
-    "api/*.php": {
+    "index.php": {
+      "runtime": "vercel-php@0.9.0"
+    },
+    "ajax_lang.php": {
       "runtime": "vercel-php@0.9.0"
     }
   },
@@ -19,8 +22,12 @@
       "dest": "/robots.txt"
     },
     {
+      "src": "/ajax_lang.php",
+      "dest": "/ajax_lang.php"
+    },
+    {
       "src": "/(.*)",
-      "dest": "/api/index.php"
+      "dest": "/index.php"
     }
   ]
 }
