@@ -130,8 +130,8 @@ if (!function_exists('__')) {
                 <div>
                     <div class="h-52 bg-gradient-to-r from-blue-950 via-blue-900 to-indigo-950 relative overflow-hidden flex items-center justify-center p-6">
                         <div class="absolute inset-0 bg-blue-500/10 backdrop-blur-[2px]"></div>
-                        <div class="relative z-10 w-32 h-32 bg-white/95 backdrop-blur-md rounded-2xl p-0 flex items-center justify-center shadow-xl group-hover:scale-105 group-hover:bg-white transition-all duration-300 border border-white/20 overflow-hidden">
-                            <img src="images/kv9logo.jpg" alt="KV9 Logo" class="w-full h-full object-contain drop-shadow-sm">
+                        <div class="relative z-10 w-32 h-32 flex-shrink-0 min-w-0 bg-white/95 backdrop-blur-md rounded-2xl p-0 flex items-center justify-center shadow-xl group-hover:scale-105 group-hover:bg-white transition-all duration-300 border border-white/20 overflow-hidden transform-gpu [mask-image:_radial-gradient(circle_at_center,_white_100%,_black_100%)]">
+                            <img src="images/kv9logo.jpg" alt="KV9 Logo" class="w-full h-full max-w-full max-h-full object-contain block drop-shadow-sm">
                         </div>
                     </div>
                     <div class="p-6">
@@ -154,8 +154,8 @@ if (!function_exists('__')) {
                 <div>
                     <div class="h-52 bg-gradient-to-r from-blue-950 via-blue-900 to-indigo-950 relative overflow-hidden flex items-center justify-center p-6">
                         <div class="absolute inset-0 bg-blue-500/10 backdrop-blur-[2px]"></div>
-                        <div class="relative z-10 w-32 h-32 bg-white/95 backdrop-blur-md rounded-2xl p-0 flex items-center justify-center shadow-xl group-hover:scale-105 group-hover:bg-white transition-all duration-300 border border-white/20 overflow-hidden">
-                            <img src="images/boss.jpg" alt="Charcoal Craft Logo" class="w-full h-full object-contain drop-shadow-sm">
+                        <div class="relative z-10 w-32 h-32 flex-shrink-0 min-w-0 bg-white/95 backdrop-blur-md rounded-2xl p-0 flex items-center justify-center shadow-xl group-hover:scale-105 group-hover:bg-white transition-all duration-300 border border-white/20 overflow-hidden transform-gpu [mask-image:_radial-gradient(circle_at_center,_white_100%,_black_100%)]">
+                            <img src="images/boss.jpg" alt="Charcoal Craft Logo" class="w-full h-full max-w-full max-h-full object-contain block drop-shadow-sm">
                         </div>
                     </div>
                     <div class="p-6">
@@ -178,8 +178,8 @@ if (!function_exists('__')) {
                 <div>
                     <div class="h-52 bg-gradient-to-r from-blue-950 via-blue-900 to-indigo-950 relative overflow-hidden flex items-center justify-center p-6">
                         <div class="absolute inset-0 bg-blue-500/10 backdrop-blur-[2px]"></div>
-                        <div class="relative z-10 w-32 h-32 bg-white/95 backdrop-blur-md rounded-2xl p-0 flex items-center justify-center shadow-xl group-hover:scale-105 group-hover:bg-white transition-all duration-300 border border-white/20 overflow-hidden">
-                            <img src="images/ch.jpg" alt="Tech Logo" class="w-full h-full object-contain drop-shadow-sm">
+                        <div class="relative z-10 w-32 h-32 flex-shrink-0 min-w-0 bg-white/95 backdrop-blur-md rounded-2xl p-0 flex items-center justify-center shadow-xl group-hover:scale-105 group-hover:bg-white transition-all duration-300 border border-white/20 overflow-hidden transform-gpu [mask-image:_radial-gradient(circle_at_center,_white_100%,_black_100%)]">
+                            <img src="images/ch.jpg" alt="Tech Logo" class="w-full h-full max-w-full max-h-full object-contain block drop-shadow-sm">
                         </div>
                     </div>
                     <div class="p-6">
@@ -202,8 +202,8 @@ if (!function_exists('__')) {
                 <div>
                    <div class="h-52 bg-gradient-to-r from-blue-950 via-blue-900 to-indigo-950 relative overflow-hidden flex items-center justify-center p-6">
                         <div class="absolute inset-0 bg-blue-500/10 backdrop-blur-[2px]"></div>
-                        <div class="relative z-10 w-32 h-32 bg-white/95 backdrop-blur-md rounded-2xl p-0 flex items-center justify-center shadow-xl group-hover:scale-105 group-hover:bg-white transition-all duration-300 border border-white/20 overflow-hidden">
-                            <img src="images/starcare.jpg" alt="Star Care Logo" class="w-full h-full object-contain drop-shadow-sm">
+                        <div class="relative z-10 w-32 h-32 flex-shrink-0 min-w-0 bg-white/95 backdrop-blur-md rounded-2xl p-0 flex items-center justify-center shadow-xl group-hover:scale-105 group-hover:bg-white transition-all duration-300 border border-white/20 overflow-hidden transform-gpu [mask-image:_radial-gradient(circle_at_center,_white_100%,_black_100%)]">
+                            <img src="images/starcare.jpg" alt="Star Care Logo" class="w-full h-full max-w-full max-h-full object-contain block drop-shadow-sm">
                         </div>
                     </div>
                     <div class="p-6">
@@ -226,8 +226,8 @@ if (!function_exists('__')) {
                 <div>
                    <div class="h-52 bg-gradient-to-r from-blue-950 via-blue-900 to-indigo-950 relative overflow-hidden flex items-center justify-center p-6">
                         <div class="absolute inset-0 bg-blue-500/10 backdrop-blur-[2px]"></div>
-                        <div class="relative z-10 w-32 h-32 bg-white/95 backdrop-blur-md rounded-2xl p-0 flex items-center justify-center shadow-xl group-hover:scale-105 group-hover:bg-white transition-all duration-300 border border-white/20 overflow-hidden">
-                            <img src="images/chrm.jpg" alt="Recruitment Logo" class="w-full h-full object-contain drop-shadow-sm">
+                        <div class="relative z-10 w-32 h-32 flex-shrink-0 min-w-0 bg-white/95 backdrop-blur-md rounded-2xl p-0 flex items-center justify-center shadow-xl group-hover:scale-105 group-hover:bg-white transition-all duration-300 border border-white/20 overflow-hidden transform-gpu [mask-image:_radial-gradient(circle_at_center,_white_100%,_black_100%)]">
+                            <img src="images/chrm.jpg" alt="Recruitment Logo" class="w-full h-full max-w-full max-h-full object-contain block drop-shadow-sm">
                         </div>
                     </div>
                     <div class="p-6">
@@ -250,8 +250,8 @@ if (!function_exists('__')) {
                 <div>
                     <div class="h-52 bg-gradient-to-r from-blue-950 via-blue-900 to-indigo-950 relative overflow-hidden flex items-center justify-center p-6">
                         <div class="absolute inset-0 bg-blue-500/10 backdrop-blur-[2px]"></div>
-                        <div class="relative z-10 w-32 h-32 bg-white/95 backdrop-blur-md rounded-2xl p-0 flex items-center justify-center shadow-xl group-hover:scale-105 group-hover:bg-white transition-all duration-300 border border-white/20 overflow-hidden">
-                            <img src="images/products/logo.png" alt="Soup Logo" class="w-full h-full object-contain drop-shadow-sm">
+                        <div class="relative z-10 w-32 h-32 flex-shrink-0 min-w-0 bg-white/95 backdrop-blur-md rounded-2xl p-0 flex items-center justify-center shadow-xl group-hover:scale-105 group-hover:bg-white transition-all duration-300 border border-white/20 overflow-hidden transform-gpu [mask-image:_radial-gradient(circle_at_center,_white_100%,_black_100%)]">
+                            <img src="images/products/logo.png" alt="Soup Logo" class="w-full h-full max-w-full max-h-full object-contain block drop-shadow-sm">
                         </div>
                     </div>
                     <div class="p-6">
