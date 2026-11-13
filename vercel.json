@@ -4,7 +4,7 @@
     {
       "src": "index.php",
       "use": "vercel-php@0.7.4",
-      "config": { "includeFiles": ["pages/**", "includes/**"] }
+      "config": { "includeFiles": ["pages/**", "includes/**", "images/**"] }
     },
     {
       "src": "api/ajax_lang.php",
